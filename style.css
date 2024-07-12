@@ -1,0 +1,885 @@
+/* font-family: 'Poppins', sans-serif; */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+#mynameLogo{
+    margin-left: 0px;
+}
+
+
+
+
+/* Navbar */
+
+
+
+
+
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 1.5vw;
+    border-radius: 9px;
+    width: 97%;
+    z-index: 3;
+    
+}
+
+.navbar-bg{
+     background-color:  rgb(236, 82, 10);
+}
+
+.navbar .logo {
+    color: rgb(236, 82, 10);
+    font-family: 'Ubuntu', sans-serif;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow:1px 1px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .logo span{
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.navbar .nav_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu li a {
+    color: white;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    padding: 0 5px;
+    border-radius: 5px;
+
+}
+
+.menu li a:hover {
+    color: white;
+    background-color:black;
+    /* border: 1px solid rgb(236, 82, 10); */
+}
+
+.menuS{
+    background-color: black;
+}
+
+
+.hamb {
+    display: none;
+    cursor: pointer;
+}
+
+.hb {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(236, 82, 10);
+}
+
+#hb1{
+   width: 15px;
+}
+
+#hb3{
+    width: 15px;
+    margin-left: 14px;
+}
+
+
+
+/* cross hamburger */
+.hb1rotate{
+    transform:rotate(30deg);
+    transition-duration: 0.5s;
+}
+
+.hb2rotate{
+    transform:rotate(120deg);
+    transition-duration: 0.5s;
+    
+}
+
+.hb3rotate{
+    transform:rotate(30deg);
+    transition-duration: 0.5s;
+
+}
+
+/* vertical menu bar */
+.menuVt{
+    width:200px;
+    height:855px;
+    display: inline-block;
+    position: fixed ;
+    right: 0px;
+    width:200px;
+    background-color: #2d2d2ddb;
+    display: none;
+    z-index: 2;
+    color: wheat;
+    
+}
+
+.menuVt ul{
+    margin: 120px 0 0 70px;
+    padding: 1px;
+    list-style: none;
+    
+}
+.menuVt li{
+    padding-bottom: 25px;
+
+}
+.menuVt li a{
+    
+    color: white;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+    /* background-color: black; */
+    
+}
+.appearance{
+    
+    display: inline-block;
+    transition:all;
+    animation-name: menuAnimate;
+    /* animation-name: menuAnimate2; */
+    animation-duration: 0.5s;
+    
+}
+
+@keyframes menuAnimate{
+    from{
+        width: 0px;
+
+    }
+    to{
+        width: 200px;
+    }
+}
+
+
+.appear{
+    right: 300px;
+}
+
+
+
+
+
+/* Home section designing */
+
+#home {
+    display: flex;
+    background: url(./images/bg_photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* z-index: 1; */
+
+}
+
+.homecontent {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left:17vw ;
+  
+    z-index: 0;
+    text-shadow: 2px 2px black;
+
+
+}
+
+.text1 {
+    font-size: 2rem;
+    margin-bottom: -32px;
+    margin-left: 5px;
+}
+
+ .text2 {
+    font-size: 5rem;
+    transition: color 0.3s ease;
+    height: 6.5rem;
+}
+ .text2:hover {
+    color: rgb(236, 82, 10);
+}
+
+ .text3 {
+    font-size: 2rem;
+    /* position: relative; */
+    margin-top: -10px;
+}
+
+.text3 span {
+    color: rgb(236, 82, 10);
+    position: relative;
+    /* text-shadow: 1px 1px 1px white; */
+}
+
+
+
+
+
+.cv{
+    font-size: 20px;
+    bottom: 150px;
+    left: -64px;
+    transform: rotate(270deg);
+    position: fixed;
+    background-color: rgb(236, 82, 10);
+    padding: 5px 10px;
+    border-radius:5px ;
+    transition: all 0.3s;
+}
+
+.cv h3{
+    color: white;
+}
+
+.cv:hover{
+    background-color: rgb(221, 122, 2);
+}
+
+
+/* responsive designing of home */
+
+
+@media only screen and (min-width:960px){
+    .menuVt{
+        display: none;
+    }
+}
+@media only screen and (max-width:960px) {
+    .navbar .nav_content {
+
+        padding: 0px 50px;
+    }
+    .hamb{
+        display: block;
+        z-index: 999;
+    }
+     
+    
+    .navbar .menu {
+        position: fixed;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        padding: 80px;
+
+    }
+
+    .menu li {
+        display: block;
+    }
+    .menu li a{
+        display: inline-block;
+        margin: 30px 0px;
+    }
+    
+
+}
+
+@media only screen and (max-width:800px){
+    .homecontent{
+        margin-left:10vw ;
+        /* background: #000; */
+    }
+}
+@media only screen and (max-width:700px){
+    .text1{
+        margin-bottom: -20px;
+    }
+    .text2{
+        font-size: 4rem;
+    }
+    .text3{
+        margin-top: -28px;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .text1{
+        font-size: 1.5rem;
+        margin-bottom: -30px;
+    }
+    .text2{
+        font-size: 3rem;
+    }
+    .text3{
+        font-size: 1.5rem;
+        margin-top: -40px;
+        height: 55px;
+    }
+    .cv{
+        font-size: 12px;
+        left: -42px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    #changeText{
+        display: block;
+        margin-top: -10px;
+    }
+}
+
+
+
+
+
+/* about styling */
+
+.title{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    font-weight:500;
+    color: rgb(236, 82, 10);
+    text-shadow: 1px 1px black;
+    /* text-shadow: 2px 2px black; */
+}
+
+.title span{
+    margin: -7px 10px 0;
+    margin-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+#about{
+    background: #e7e7e791;
+    padding-top:30px ;
+}
+.about_content{
+    display: flex;
+    padding: .5rem 4rem;
+    
+}
+.about_image{
+    /* padding: 1rem 0 1rem; */
+    
+}
+.about_image img{
+    width: 25rem;
+    border-radius: 15px;
+}
+/* .about_image img:hover{
+    transform:scale(1.2);
+} */
+
+.about_text{
+    padding: 7rem 7rem;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+
+/* Skills section styling */
+
+.picture{
+    height: 150px;
+    width: 230px;
+    border-radius:12px ;
+    background-color:black ;
+    box-shadow:2px 2px 2px black ;
+}
+.picture:hover{
+    cursor:pointer;
+}
+
+#project-section{
+    background-color: grey;
+    padding-top: 30px;
+}
+.projects{
+    display: flex;
+    padding: 3rem;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.allProject{
+    width: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    height: 22.5rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 35px;
+    box-shadow: 2px 2px 5px black;
+    background-color: #505050;
+    transition: all  0.4s;
+    position: relative;
+
+}
+
+.allProject p{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: rgb(236, 82, 10);
+    text-shadow: 2px 2px 3px black;
+    padding-top: 10px;
+    position: relative;
+}
+
+.gitLink {
+    color: white;
+    /* background-color: rgb(236, 82, 10); */
+    padding: 0 7px;
+    border-radius: 50%;
+    margin-top: 10px;
+    font-family: poppins;
+    /* box-shadow: 2px 2px 4px black; */
+    transition: all 0.3s;
+    position: absolute;
+    bottom: 10px ;
+    right: 30px;
+    font-size: 25px;
+    color: white;
+
+    border: 2px solid rgb(236, 82, 10);
+     border-radius: 30%; 
+     background-color:whitesmoke"
+}
+
+.gitLink:hover{
+    color:rgb(236, 82, 10);
+}
+
+.allProject:hover{
+    transform: scale(1.1);
+    /* background-color: rgb(248, 174, 83); */
+    color: white;
+}
+
+
+
+.allProject span{
+    color: white;
+    font-family:poppins;
+    text-align: center;
+}
+
+.open-btn{
+    background: rgb(236, 82, 10);
+    padding: 0 5px 2px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.open-btn:hover{
+    color: rgb(236, 82, 10);
+    background-color: transparent;
+    border: 2px solid rgb(236, 82, 10);
+}
+
+
+
+
+
+/* ****** responsive of about section *******/
+@media only screen and (max-width:1140px ) and  (min-width:1075px)
+{
+    .about_text{
+        padding: 5rem 7rem;
+    }
+}
+
+@media only screen and (max-width:1075px ) and (min-width:860px)
+{
+    .about_text{
+        padding: 3rem 2rem;
+    }
+}
+
+@media only screen and (max-width:860px)
+{
+    .about_content{
+        flex-direction: column;
+    }
+    .about_text{
+        padding: 0rem 2rem;
+    }
+    .about_image{
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5rem 2rem ;
+    }
+    .title{
+        padding-top: 2.5rem;
+    }
+
+    .about_image img{
+        width: 40vw;
+    }
+
+    .allProject{
+        margin-bottom: 50px;
+    }
+    
+}
+
+@media only screen and (max-width:660px) {
+    .text2{
+        line-height: 80px;
+        margin: 14px 0px 0px 0px;
+    }
+
+    .about_text{
+        padding: 1rem 0rem;
+        font-size: 15px;
+    }
+
+    .about_content{
+        padding: 0.5rem 1rem;
+    }
+    .about_image img{
+        width: 50vw;
+    }
+    .navbar .nav_content {
+
+        padding: 0px 30;
+    }
+    
+}
+
+
+/* skill css */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+.skills_section{
+    width: 100%;
+    /* padding: 0px 10%; */
+    padding: 100px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: 100px 0; */
+    background-color: #e7e7e7;
+    
+}
+.skills_head{
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.skills_head h1{
+    font-size: 30px;
+    margin-bottom: -5px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 1px 1px black;
+}
+.skills_head h1 span{
+    color: rgb(236, 82, 10);
+}
+.skills_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(2, 1fr); */
+   
+}
+.skills_main .skill_bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 10px;
+}
+
+.skill_bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(236, 82, 10);
+    border-radius: 25px;
+}
+.skill_bar .bar .html{
+    width: 90%;
+}
+
+.skill_bar .bar .css{
+    width: 85%;
+}
+
+
+
+.skill_bar .bar .js{
+    width: 80%;
+}
+.skill_bar .bar .react{
+    width: 70%;
+}
+.skill_bar .bar .node{
+    width: 70%;
+}
+
+
+.skill-content{
+    width: 30rem;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.skill-graph{
+    width: 25rem;
+}
+
+.info p{
+    font-weight: 600;
+}
+
+@media only screen and (max-width:1100px){
+    
+    .skill-content{
+        margin-left: 0px;
+        /* margin-top: 50px; */
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:1081px){
+    
+    .skill-content{
+        margin-left: 0px;
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .skills_section{
+        padding: 80px 30px 30px;
+    }
+}
+
+
+/* contect css */
+#contact {
+    background-color: grey;
+    
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-content p {
+    margin: -5px 0 10px 0;
+    
+}
+
+
+
+.social {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  
+}
+
+
+.icon {
+    padding: 10px 15px;
+}
+
+.icon a i {
+    color: black;
+    font-size: 25px;
+    transition: all 0.3s;
+}
+
+.icon a i:hover {
+    color: rgb(236, 82, 10);
+}
+
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.row {
+    height: 70px;
+    width: 300px;
+    background-color: grey;
+    margin: 5px;
+    /* text-align: center; */
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgb(75, 75, 75);
+}
+
+.row i {
+    font-size: 35px;
+    padding: 20px;
+    /* color: orange; */
+}
+
+.name-info {
+    display: inline-block;
+}
+
+.name-info span {
+    font-weight: 600;
+}
+
+footer {
+    font-weight: 600;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer span {
+    color: white;
+    /* text-shadow: .5px .5px black; */
+}
+
+.scroll-top{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: rgb(236, 82, 10);
+    padding: 2px 10px;
+    color: white;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.scroll-top:hover{
+    border: 2px solid rgb(236, 82, 10);
+    background: transparent;
+    color: rgb(236, 82, 10);
+}
+
+
+
+@media only screen and (max-width:700px) {
+
+    .contact-content p{
+        margin-left:50px;
+        margin-right:50px;
+    }
+}
+
+@media only screen and (max-width:450px) {
+
+    #contact{
+        padding-bottom:10px;
+    }
+    .row{
+        height:50px;
+        width: 250px;
+    }
+
+    .row i{
+        font-size: 25px;
+        padding: 0 10px 10px;
+    }
+    .name-info{
+        font-size: 15px;
+    }
+
+    footer{
+        padding: 0 15px;
+        margin-bottom:10px ;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .scroll-top{
+        bottom: 50px;
+        right: 10px;
+        font-size: 15px;
+        padding: 2px 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
